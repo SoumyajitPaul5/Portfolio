@@ -1,403 +1,462 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Soumyajit Paul</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Soumyajit Paul</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assests/profile-pic.JPG" alt="Soumyajit Paul profile picture" class="profile-pic" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Soumyajit Paul</h1>
-        <p class="section__text__p2">Software Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assests/Soumyajit Paul.docx')"
-          >
-            Download CV
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assests/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/soumyajit-paul-1795a1309?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BfzIwqFU9SZ6F%2FK8TGnbR3A%3D%3D'"
-          />
-          <img
-            src="./assests/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/SoumyajitPaul5'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assests/about-pic.JPG"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assests/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>3+ years <br />Software Development</p>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
+
+      <title>Soumyajit Paul's Portfolio</title>
+   </head>
+   <body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <nav class="nav container">
+            <a href="#" class="nav__logo">
+               <span class="nav__logo-circle">S</span>
+
+               <span class="nav__logo-name">Soumyajit Paul.</span>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+               <span class="nav__title">Menu</span>
+
+               <h3 class="nav__name">Soumyajit</h3>
+
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="#home" class="nav__link active-link">Home</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#about" class="nav__link">About Me</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#projects" class="nav__link">Projects</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#contact" class="nav__link nav__link-button">Contact Me</a>
+                  </li>
+               </ul>
+
+               <!-- Close button -->
+               <div class="nav__close" id="nav-close">
+                  <i class="ri-close-line"></i>
+               </div>
             </div>
-            <div class="details-container">
-              <img
-                src="./assests/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>Diploma in Computer Science (Programming Stream)</p>
+
+            <div class="nav__buttons">
+               <!-- Theme button -->
+               <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+               <!-- Toggle button -->
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-4-line"></i>
+               </div>
             </div>
-          </div>
-          <div class="text-container">
-            <p>
-                I am a motivated and detail-oriented computer programming graduate from Niagara College, passionate about software development.
-                With a strong foundation in various programming languages and a thorough understanding of the software development lifecycle, I am adept at solving complex problems with innovative solutions. </br>
-                Throughout my academic journey, I have honed my skills in creating efficient and scalable software applications, and I am eager to bring my knowledge and enthusiasm to a professional setting.
-                My goal is to contribute meaningfully to a dynamic team, leveraging my technical expertise to develop impactful software solutions while continuing to grow and evolve as a developer.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Languages</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assests/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assests/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C#</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assests/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Java</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assests/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assests/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assests/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
+         </nav>
+      </header>
+
+      <!--==================== MAIN ====================-->
+      <main class="main">
+         <!--==================== HOME ====================-->
+         <section class="home section" id="home">
+            <div class="home__container container grid">
+               <h1 class="home__name">
+                  Soumyajit Paul
+               </h1>
+
+               <div class="home__perfil">
+                  <div class="home__image">
+                     <img src="assets/img/home-perfil.jpg" alt="image" class="home__img">
+                     <div class="home__shadow"></div>
+
+                     <img src="assets/img/curved-arrow.svg" alt="" class="home__arrow">
+                     <img src="assets/img/random-lines.svg" alt="" class="home__line">
+
+                     <div class="geometric-box"></div>
+                  </div>
+
+                  <div class="home__social">
+
+                     <a href="https://linkedin.com/in/soumyajit-paul-1795a1309" target="_blank" class="home__social-link">
+                        <i class="ri-linkedin-box-line"></i>
+                     </a>
+
+                     <a href="https://github.com/SoumyajitPaul5" target="_blank" class="home__social-link">
+                        <i class="ri-github-line"></i>
+                     </a>
+                  </div>
+               </div>
+
+               <div class="home__info">
+                  <p class="home__description">
+                     <b>Backend Developer</b>, with knowledge in software 
+                     development and .NET frameworks, I offer the best 
+                     projects resulting in quality work.
+                  </p>
+                  
+                  <a href="#about" class="home__scroll">
+                     <div class="home__scroll-box">
+                        <i class="ri-arrow-down-s-line"></i>
+                     </div>
+                     
+                     <span class="home__scroll-text">Scroll Down</span>
+                  </a>
+               </div>
             </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Databases</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assests/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MySQL</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assests/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MongoDB</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assests/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SQLite</h</3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assests/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Microsoft SQL Server</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
+         </section>
+
+         <!--==================== ABOUT ====================-->
+         <section class="about section" id="about">
+            <div class="about__container container grid">
+               <h2 class="section__title-1">
+                  <span>About Me.</span>
+               </h2>
+
+               <div class="about__perfil">
+                  <div class="about__image">
+                     <img src="assets/img/about-perfil.jpg" alt="image" class="about__img">
+
+                     <div class="about__shadow"></div>
+
+                     <div class="geometric-box"></div>
+                     <img src="assets/img/random-lines.svg" alt="" class="about__line">
+                     <div class="about__box"></div>
+                  </div>
+               </div>
+
+               <div class="about__info">
+                  <p class="about__description">
+                     Passionate about creating <b>Software Applications</b> with 
+                     <b>ASP.NET MVC</b> and <b>.NET MAUI</b>, I have over 3 years of 
+                     experience and many strong quality projects to showcase my skills.
+                  </p>
+
+                  <ul class="about__list">
+                     <li class="about__item">
+                        <b>Languages:</b> Java, C++, C#, CSS, JavaScript & HTML
+                     </li>
+                     <li class="about__item">
+                        <b>Tools & Technologies:</b> Visual Studio, Git & Microsoft Azure
+                     </li>
+                     <li class="about__item">
+                        <b>Databases:</b> MySQL, SQLite & Microsoft SQL Server
+                     </li>
+                     <li class="about__item">
+                        <b>Frameworks:</b> ASP.NET MVC & .NET MAUI
+                     </li>
+                  </ul>
+
+                  <div class="about__buttons">
+                     <a href="#contact" class="button">
+                        <i class="ri-send-plane-line"></i> Contact Me
+                     </a>
+
+                     <a href="https://linkedin.com/in/soumyajit-paul-1795a1309" target="_blank" class="button__ghost">
+                        <i class="ri-linkedin-box-line"></i>
+                     </a>
+                  </div>
+               </div>
             </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frameworks</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assests/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>ASP.NET MVC</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assests/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>ASP.NET MAUI</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assests/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React.js</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assests/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Angular</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
+         </section>
+
+         <!--==================== SERVICES ====================-->
+         <section class="services section">
+            <h2 class="section__title-2">
+               <span>Services.</span>
+            </h2>
+
+            <div class="services__container container grid">
+               <article class="services__card">
+                  <div class="services__border"></div>
+
+                  <div class="services__content">
+                     <div class="services__icon">
+                        <div class="services__box"></div>
+                        <i class="ri-layout-4-line"></i>
+                     </div>
+   
+                     <h2 class="services__title">Web Design</h2>
+   
+                     <p class="services__description">
+                        Beautiful and elegant designs with 
+                        interfaces that are intuitive, efficient 
+                        and pleasant  to use for the user.
+                     </p>
+                  </div>
+               </article>
+
+               <article class="services__card">
+                  <div class="services__border"></div>
+
+                  <div class="services__content">
+                     <div class="services__icon">
+                        <div class="services__box"></div>
+                        <i class="ri-code-box-line"></i>
+                     </div>
+   
+                     <h2 class="services__title">Development</h2>
+   
+                     <p class="services__description">
+                        Custom web development tailored to your 
+                        specifications, designed to provide a 
+                        flawless user experience.
+                     </p>
+                  </div>
+               </article>
+
+               <article class="services__card">
+                  <div class="services__border"></div>
+
+                  <div class="services__content">
+                     <div class="services__icon">
+                        <div class="services__box"></div>
+                        <i class="ri-smartphone-line"></i>
+                     </div>
+   
+                     <h2 class="services__title">Mobile App</h2>
+   
+                     <p class="services__description">
+                        Design and transform website projects 
+                        into mobile apps to provide a seamless
+                        user experience.
+                     </p>
+                  </div>
+               </article>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assests/ASP.NET MVC.jpg"
-                alt="Medical Office MVC Version"
-                class="project-img"
-              />
+         </section>
+
+         <!--==================== PROJECTS ====================-->
+         <section class="projects section" id="projects">
+            <h2 class="section__title-1">
+               <span>Projects.</span>
+            </h2>
+
+            <div class="projects__container container grid">
+               <article class="projects__card">
+                  <div class="projects__image">
+                     <img src="assets/img/project-1.jpg" alt="image" class="projects__img">
+
+                     <a href="#" class="projects__button button">
+                        <i class="ri-arrow-right-up-line"></i>
+                     </a>
+                  </div>
+
+                  <div class="projects__content">
+                     <h3 class="projects__subtitle">Website</h3>
+                     <h2 class="projects__title">Medical Office MVC</h2>
+
+                     <p class="projects__description">
+                        This MVC application efficiently manages patients, doctors,
+                         and appointments. Key features include adding, editing, and deleting patient and doctor records, 
+                         scheduling appointments, assigning patients to doctors, downloading appointment details, 
+                         filter search options, user authentication, role management, sending emails and much more.
+                     </p>
+                  </div>
+
+                  <div class="projects__buttons">
+                     <a href="https://github.com/SoumyajitPaul5/Medical-Office-MVC-Version" target="_blank" class="projects__link">
+                        <i class="ri-github-line"></i> View
+                     </a>
+
+                     <a href="https://medicaloffice20240601022450.azurewebsites.net/" target="_blank" class="projects__link">
+                        <i class="ri-dribbble-line"></i> View
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <div class="projects__image">
+                     <img src="assets/img/project-2.jpg" alt="image" class="projects__img">
+
+                     <a href="#" class="projects__button button">
+                        <i class="ri-arrow-right-up-line"></i>
+                     </a>
+                  </div>
+
+                  <div class="projects__content">
+                     <h3 class="projects__subtitle">App</h3>
+                     <h2 class="projects__title">MAUI App</h2>
+
+                     <p class="projects__description">
+                        This MAUI app allows users to efficiently manage patient assignments to doctors, 
+                        with features to filter doctors and edit patient details.
+                         Built using .NET MAUI and C#.
+                     </p>
+                  </div>
+
+                  <div class="projects__buttons">
+                     <a href="https://github.com/SoumyajitPaul5/Medical-Office-MAUI-Version" target="_blank" class="projects__link">
+                        <i class="ri-github-line"></i> View
+                     </a>
+
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <div class="projects__image">
+                     <img src="assets/img/project-3.jpg" alt="image" class="projects__img">
+
+                     <a href="#" class="projects__button button">
+                        <i class="ri-arrow-right-up-line"></i>
+                     </a>
+                  </div>
+
+                  <div class="projects__content">
+                     <h3 class="projects__subtitle">Website</h3>
+                     <h2 class="projects__title">Music Collection MVC</h2>
+
+                     <p class="projects__description">
+                        This MVC music collection app features user login and registration,
+                         allowing users to create, edit, and delete songs and albums. 
+                         It also includes user management functionalities, enabling the addition of new users. 
+                         The app provides a comprehensive solution for managing a music collection efficiently.
+                     </p>
+                  </div>
+
+                  <div class="projects__buttons">
+                     <a href="https://github.com/SoumyajitPaul5/MVC-Music" target="_blank" class="projects__link">
+                        <i class="ri-github-line"></i> View
+                     </a>
+
+                     <a href="https://mvcmusic20240601042727.azurewebsites.net/" target="_blank" class="projects__link">
+                        <i class="ri-dribbble-line"></i> View
+                     </a>
+                  </div>
+               </article>
+
+              
             </div>
-            <h2 class="experience-sub-title project-title">Medical Office MVC Version</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/SoumyajitPaul5/Medical-Office-MVC-Version.git'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://medicaloffice20240601022450.azurewebsites.net/'"
-              >
-                Live Demo
-              </button>
+         </section>
+
+         <section class="contact section" id="contact">
+            <div class="contact__container grid">
+               <div class="contact__data">
+                  <h2 class="section__title-2">
+                     <span>Contact Me.</span>
+                  </h2>
+
+                  <p class="contact__description-1">
+                     Go ahead! Send me a message, and I'll get back to you as soon as possible. 
+                  </p>
+
+
+                  <p class="contact__description-1">
+                     If you prefer to send an email directly, you can reach me at <a href="mailto:soumyajitpaul011@gmail.com">soumyajitpaul011@gmail.com</a>.
+                  </p>
+
+                  
+                  <div class="geometric-box"></div>
+               </div>
+
+               <div class="contact__mail">
+                  <h2 class="contact__title">
+                     Send Me A Message 
+                  </h2>
+
+                  <form action="" class="contact__form" id="contact-form">
+                     <div class="contact__group">
+                        <div class="contact__box">
+                           <input type="text" name="user_name" class="contact__input" id="name" required placeholder="Name">
+                           <label for="name" class="contact__label">Name</label>
+                        </div>
+   
+                        <div class="contact__box">
+                           <input type="email" name="user_email" class="contact__input" id="email" required placeholder="Email Address">
+                           <label for="email" class="contact__label">Email Address</label>
+                        </div>
+                     </div>
+                     
+                     <div class="contact__box">
+                        <input type="text" name="user_subject" class="contact__input" id="subject" required placeholder="Subject">
+                        <label for="subject" class="contact__label">Subject</label>
+                     </div>
+
+                     <div class="contact__box contact__area">
+                        <textarea name="user_message" class="contact__input" id="message" required placeholder="Message"></textarea>
+                        <label for="message" class="contact__label">Message</label>
+                     </div>
+
+                     <p class="contact__message" id="contact-message"></p>
+
+                     <button type="submit" class="contact__button button">
+                        <i class="ri-send-plane-line"></i> Send Message
+                     </button>
+                  </form>
+               </div>
+
+               <div class="contact__social">
+                  <img src="assets/img/curved-arrow.svg" alt="" class="contact__social-arrow">
+
+                  <div class="contact__social-data">
+                     <div>
+                        <p class="contact__social-description-1">
+                           Don't want to send emails?
+                        </p>
+   
+                        <p class="contact__social-description-2">
+                           Contact me on my LinkedIn.
+                        </p>
+                     </div>
+
+                     <div class="contact__social-links">
+                       
+                        <a href="https://linkedin.com/in/soumyajit-paul-1795a1309" class="contact__social-link" target="_blank">
+                           <i class="ri-linkedin-box-line"></i>
+                        </a>
+                     </div>
+                  </div>
+               </div>
             </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assests/MAUI.jpg"
-                alt="Medical-Office-MAUI-Version"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Medical Office MAUI Version</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/SoumyajitPaul5/Medical-Office-MAUI-Version.git'"
-              >
-                Github
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assests/MVC.png"
-                alt="MVC Music App"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">MVC Music App</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/SoumyajitPaul5/MVC-Music.git'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://mvcmusic20240601042727.azurewebsites.net/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assests/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:soumyajitpaul011@gmail.com">soumyajitpaul011@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assests/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/soumyajit-paul-1795a1309?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BaJ5xelQbROeMG4t0rZKnQA%3D%3D">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2024 Soumyajit Paul. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+         </section>
+      </main>
+
+      <!--==================== FOOTER ====================-->
+      <footer class="footer">
+         <div class="footer__container container grid">
+            <ul class="footer__links">
+               <li>
+                  <a href="#home" class="footer__link">Home</a>
+               </li>
+
+               <li>
+                  <a href="#about" class="footer__link">About</a>
+               </li>
+
+               <li>
+                  <a href="#projects" class="footer__link">Projects</a>
+               </li>
+            </ul>
+
+            <span class="footer__copy">
+               &#169; All Rights Reserved By 
+               <a href="#">Soumyajit Paul.</a>
+            </span>
+         </div>
+      </footer>
+
+      <!--========== SCROLL UP ==========-->
+      <a href="#" class="scrollup" id="scroll-up">
+         <i class="ri-arrow-up-s-line"></i>
+      </a>
+
+      <!--=============== SCROLLREVEAL ===============-->
+      <script src="assets/js/scrollreveal.min.js"></script>
+      
+      <!--=============== EMAIL JS ===============-->
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+   </body>
 </html>
